@@ -1,9 +1,16 @@
 public class Hello
 {
-
-// author
     public static void main( String argv[] )
     {
-        System.out.println( "Hello, World" + "!" );
+        // Default is "World"
+        String name = "World";
+        if ( argv.length != 0 )
+        {
+            name = argv[0];
+        }
+
+        Greeter greeter = new Greeter(name);
+        System.out.println(greeter.greet());
     }
 }
+
